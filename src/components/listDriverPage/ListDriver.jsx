@@ -1,23 +1,7 @@
 import React, { Component } from 'react';
-import drivers from '../drivers.json';
 import Driver from './Driver';
 
-class Drivers extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      drivers: []
-    }
-  }
-
-  componentDidMount(){
-    this.getDrivers();
-  }
-
-  getDrivers(){
-    this.setState({ drivers: drivers.drivers});
-  }
-
+class ListDriver extends Component {
   render() {
     return (
       <div>
@@ -32,8 +16,8 @@ class Drivers extends Component {
           </thead>
           <tbody>
             {
-              this.state.drivers.map((driver, i) => {
-                return <Driver driver={driver} key={i}/>
+              this.props.drivers.map((driver, i) => {
+                return <Driver driver={driver} key={i} notifyClicked={this.props.notifyClicked}/>
               })
             }
           </tbody>
@@ -43,4 +27,4 @@ class Drivers extends Component {
   }
 }
 
-export default Drivers;
+export default ListDriver;
