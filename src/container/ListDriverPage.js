@@ -55,7 +55,7 @@ class ListDriverPage extends Component {
         }
         {
             this.state.isShown ? <Modal selectedDriver = {this.state.selectedDriver} 
-            sendClicked={this.sendClicked} cancelClicked={this.sendClicked}/> : null
+            sendClicked={this.sendClicked} cancelClicked={this.cancelClicked}/> : null
         }
       </div>
     );
