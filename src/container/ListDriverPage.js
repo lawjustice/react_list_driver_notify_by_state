@@ -25,9 +25,11 @@ class ListDriverPage extends Component {
   }
   sendClicked(e){
     console.log("send container clicked");
+    // submit api here, if success then make isShown false
     this.setState({
         isShown : false
     })
+    alert("Message = " + e.message);
   }
 
   cancelClicked(e){

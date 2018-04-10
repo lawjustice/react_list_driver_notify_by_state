@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './css/TableComponent.css';
 
 class Driver extends Component {
   constructor(props){
@@ -13,14 +14,15 @@ class Driver extends Component {
 
   render() {
     return (
-      <tr>
+      <tr className="table-body">
         <td>{this.props.driver.name}</td>
         <td>{this.props.driver.phone}</td>
         <td>{this.props.driver.suspended === 0 ? 'NO' : 'YES'}</td>
         <td>
         {
             this.props.driver.suspended === 0 ? 
-            (<button id ="notify" onClick={this.notifyClicked}>Notify</button>) : (<button disabled>Notify</button>)
+            (<button onClick={this.notifyClicked}>Notify</button>) : 
+            (<button disabled>Notify</button>)
         }
         </td>
       </tr>)

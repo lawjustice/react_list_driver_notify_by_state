@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Driver from './Driver';
+import './css/TableComponent.css';
 
 class ListDriver extends Component {
   render() {
@@ -7,7 +8,7 @@ class ListDriver extends Component {
       <div>
         <table>
           <thead>
-            <tr>
+            <tr className="table-header">
               <td>Name</td>
               <td>Phone</td>
               <td>Suspended</td>
